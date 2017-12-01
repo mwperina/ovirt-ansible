@@ -24,7 +24,7 @@ The Ansible roles are packaged into an RPM file that can be installed from the c
 
 Run the following command to install all roles:
 ```
-# yum install ovirt-ansible-roles 
+# yum install ovirt-ansible-roles-all 
 ```
 Run the following command to install specific role:
 ```
@@ -36,10 +36,10 @@ To search all available roles you can execute following command:
 ```
 By default the roles will be installed to `/usr/share/ansible/roles`.
 
-The structure of the ovirt-ansible-roles package is as follows:
+The structure of the ovirt-ansible-roles-all package is as follows:
 *    `/usr/share/ansible/roles` - stores the roles.
 *    `/usr/share/ansible/roles/{role_name}` - stores the specific role.
-*    `/usr/share/doc/ovirt-ansible-roles/` - stores the examples, a basic overview and the licence.
+*    `/usr/share/doc/ovirt-ansible-roles-all/` - stores the examples, a basic overview and the licence.
 *    `/usr/share/doc/{role_name}` - stores the documentation and examples specific to the role.
 
 ### Installing using Galaxy
@@ -48,7 +48,7 @@ Ansible provides a command line utility to install Roles directory from the Gala
 
 To install the roles using Galaxy, run the following from the command line:
 ```
-# ansible-galaxy install oVirt.ovirt-ansible-roles
+# ansible-galaxy install oVirt.ovirt-ansible-roles-all
 ```
 To install the specific role using Galaxy, run the following from the command line:
 ```
@@ -58,7 +58,7 @@ All roles are available under [oVirt organization] on Ansible Galaxy.
 
 By default the roles will be installed to `/etc/ansible/roles`.
 
-The structure of ovirt.ovirt-ansible-roles is as follows:
+The structure of ovirt.ovirt-ansible-roles-all is as follows:
 * `/etc/ansible/roles/` - stores the roles.
 * `/etc/ansible/roles/{role_name}` - stores the specifc role.
 * `/etc/ansible/roles/{role_name}/examples` - stores the examples, a basic overview
@@ -93,7 +93,7 @@ engine_cafile: /etc/pki/ovirt-engine/ca.pem
 ```
 **Note:** If you prefer, these variables can be added directly to the playbook instead.
 
-4) Create your playbook. To simplify this, you can copy and modify an example in `/etc/ansible/roles/ovirt.ovirt-ansible-roles/examples` or `/usr/share/doc/ovirt-ansible-roles/examples` depending on the method used to install the roles:
+4) Create your playbook. To simplify this, you can copy and modify an example in `/etc/ansible/roles/ovirt.ovirt-ansible-roles-all/examples` or `/usr/share/doc/ovirt-ansible-roles-all/examples` depending on the method used to install the roles:
 ```yaml
 $ cat ovirt_infra.yml
 ---

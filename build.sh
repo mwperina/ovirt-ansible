@@ -4,8 +4,8 @@ VERSION="1.1.3"
 MILESTONE=master
 RPM_RELEASE="0.1.$MILESTONE.$(date -u +%Y%m%d%H%M%S)"
 
-ROLE_NAME="ovirt.ansible-roles"
-PACKAGE_NAME="ovirt-ansible-roles"
+ROLE_NAME="ovirt.ansible-roles-all"
+PACKAGE_NAME="ovirt-ansible-roles-all"
 PREFIX=/usr/local
 DATAROOT_DIR=$PREFIX/share
 ROLES_DATAROOT_DIR=$DATAROOT_DIR/ansible/roles
@@ -29,9 +29,9 @@ dist() {
    -e "s|@RPM_RELEASE@|$RPM_RELEASE|g" \
    -e "s|@PACKAGE_NAME@|$PACKAGE_NAME|g" \
    -e "s|@PACKAGE_VERSION@|$PACKAGE_VERSION|g" \
-   < ovirt-ansible-roles.spec.in > ovirt-ansible-roles.spec
+   < ovirt-ansible-roles-all.spec.in > ovirt-ansible-roles-all.spec
 
-  git ls-files | tar --files-from /proc/self/fd/0 -czf "$TARBALL" ovirt-ansible-roles.spec
+  git ls-files | tar --files-from /proc/self/fd/0 -czf "$TARBALL" ovirt-ansible-roles-all.spec
   echo "tar archive '$TARBALL' created."
 }
 
